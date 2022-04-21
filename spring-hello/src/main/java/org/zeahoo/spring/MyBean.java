@@ -19,14 +19,14 @@ package org.zeahoo.spring;
  * hello.
  * @author zeahoo z
  */
-public class MyTestBean {
-	private String name = "Zeahoo";
+public class MyBean {
+	private String name;
 
-	public MyTestBean(String name) {
+	public MyBean(String name) {
 		this.name = name;
 	}
 
-	public MyTestBean() {
+	public MyBean() {
 	}
 
 	@Override

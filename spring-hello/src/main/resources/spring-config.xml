@@ -3,6 +3,12 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="myTestBean" class="org.zeahoo.spring.MyTestBean"/>
+	<bean id="myBean" class="org.zeahoo.spring.MyBean">
+		<property name="name" value="Bob"/>
+	</bean>
 
+	<bean id="myBean1" class="org.zeahoo.spring.MyBean">
+		<property name="name" value="Bill"/>
+	</bean>
+	<alias name="myBean" alias="hello"/>
 </beans>

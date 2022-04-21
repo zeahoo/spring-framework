@@ -4,17 +4,19 @@ import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
-import org.zeahoo.spring.MyTestBean;
+import org.zeahoo.spring.MyBean;
 
 /**
  *
  */
-public class MyTestBeanTest {
+public class MyTestBean {
 	@Test
 	public void MyTestBeanTest() {
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("spring-config.xml"));
-		MyTestBean myTestBean = (MyTestBean) bf.getBean("myTestBean");
-		System.out.println(myTestBean.getName());
+		MyBean myBean = (MyBean) bf.getBean("myBean");
+		System.out.println(myBean.getName());
+		MyBean myBean1 = (MyBean) bf.getBean("myBean1");
+		System.out.println(myBean1.getName());
 	}
 
 }
